@@ -1,0 +1,64 @@
+.theme_switcher {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme_switcher input:checked + .slider {
+  background: transparent;
+}
+
+.slider {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  color: #4a4a4a;
+}
+
+input:checked + .slider .icons {
+  color: #f0f0f0;
+}
+
+.sun,
+.moon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:checked + .slider:before {
+  transform: translateX(40px);
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}

@@ -1,0 +1,30 @@
+.cryptos_info_block h2,
+span {
+  color: var(--text-light);
+}
+
+.cryptos_info_block p {
+  color: var(--theme-color-button);
+}
+
+.cryptos_info_block p,
+.cryptos_info_block span {
+  font-weight: bold;
+}
+
+.cryptos_info_block {
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 20px;
+  gap: 15px;
+}
+
+.marquee {
+  background-color: var(--text-dark);
+}
+
+.marquee h2 {
+  color: var(--text-light);
+}

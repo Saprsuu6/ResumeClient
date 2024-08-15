@@ -1,0 +1,41 @@
+.portfolio_item {
+  display: flex;
+  width: 100%;
+}
+
+.portfolio_item > div:first-child {
+  position: relative;
+  z-index: 0;
+  height: 350px;
+  flex: 1;
+}
+
+.portfolio_item > div:first-child:hover + .info,
+.info:hover {
+  opacity: 1;
+}
+
+.info {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: opacity 1s ease;
+}
+
+.info h3 {
+  margin-bottom: 10px;
+}
+
+.info p,
+.info h3 {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}

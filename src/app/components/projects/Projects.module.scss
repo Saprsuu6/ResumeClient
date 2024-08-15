@@ -1,0 +1,111 @@
+@import "../../mediaQueries.scss";
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+
+  @include respond-to-display-mobile-mini() {
+    border-radius: 0;
+    margin: 20px 0 0 0;
+    box-shadow: none;
+  }
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dark);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@include respond-to-display-mobile-mini() {
+  button.prev,
+  button.next {
+    display: none;
+  }
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+  transition: right 0.3s ease;
+}
+
+.slides:hover ~ button.next,
+button.next:hover {
+  right: 50%;
+  margin-right: 10px;
+}
+
+
+button.prev,
+button.next {
+  background-color: var(--text-light);
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: transparent;
+}
+
+.navigation {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.navigation input[name="slides"] {
+  display: none;
+}
+
+.radio_custom_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.radio_custom_label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--theme-hover);
+}
+
+.navigation input[name="slides"]:checked + .radio_custom_label:before {
+  background-color: transparent;
+}

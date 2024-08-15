@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import './app/mediaQueries.scss';
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  --text-light: #a9e5bb;
+  --text-dark: #2d1e2f;
+  --theme-header: #f7b32b;
+  --theme-footer-text: #0d1f22;
+  --theme-footer: #f7b32b;
+}
+
+html[data-theme='light'] {
+  --theme-background: #a9e5bb;
+  --theme-font-color: #2d1e2f;
+  --theme-font-color-inverce: #a9e5bb;
+  --theme-font-color-side: #60222d;
+  --theme-color-button: #f7b32b;
+  --theme-hover: #fcf6b1;
+  --theme-scroll: #77777750;
+}
+
+html[data-theme='dark'] {
+  --theme-background: #2d1e2f;
+  --theme-font-color: #a9e5bb;
+  --theme-font-color-inverce: #2d1e2f;
+  --theme-font-color-side: #fcf6b1;
+  --theme-color-button: #f7b32b;
+  --theme-hover: #fcf6b1;
+  --theme-scroll: #77777750;
+}
+
+body {
+  transition: background-color 0.3s ease;
+  background-color: var(--theme-background);
+  margin: 0;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  color: var(--theme-font-color);
+}
+
+h3,
+h4 {
+  color: var(--theme-font-color-side);
+}
+
+h2,
+h4 {
+  text-align: center;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--theme-color-button);
+  color: var(--text-dark);
+  padding: 13px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: var(--theme-hover);
+}
+
+#home,
+#aboutMe,
+#skills,
+#services,
+#projects {
+  margin-bottom: 20px;
+}
+
+@include respond-to-display-mobile-mini() {
+  #projects {
+    margin-bottom: 0;
+  }
+}
+
+.grid_container {
+  display: grid;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo,
+.navbar li,
+a,
+.card p:nth-child(3) {
+  transition: color 0.3s ease;
+}
+
+.logo a:hover,
+.navbar li a:hover,
+.cvs a:hover,
+.card p:nth-child(3):hover {
+  color: var(--theme-hover);
+}
+
+button,
+.skills ul li {
+  transition: background-color 0.3s ease;
+}
+
+.linkedIn:hover,
+.github:hover,
+.instagram:hover,
+.telegram:hover,
+.gmail:hover,
+.logo_img:hover,
+.hireMe:hover {
+  animation: shake 1s ease-in-out 1;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-20deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(20deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-1000px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-color-button);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-hover);
+}

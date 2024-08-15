@@ -1,0 +1,91 @@
+@import '../../mediaQueries.scss';
+
+.footer {
+  background: var(--theme-footer);
+  color: var(--theme-footer-text);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--theme-footer-text);
+}
+
+.footer p {
+  color: var(--theme-footer-text);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer ul li {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--theme-footer-text);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 30%;
+
+  opacity: 0;
+  transition: opacity 1s;
+
+  @include respond-to-display-mobile-mini() {
+    left: 0;
+  }
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.text_container {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.image_container {
+  position: absolute;
+  top: -70%;
+  left: 87%;
+  z-index: 1;
+}
+
+.logo_img {
+  background: url(../../assets/react.png) no-repeat;
+  background-size: contain;
+  width: 55px;
+  height: 55px;
+}
