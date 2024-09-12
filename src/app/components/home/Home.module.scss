@@ -30,7 +30,7 @@
   }
 }
 
-@include respond-to-display-mobile-mormal() {
+@include respond-to-display-mobile-normal() {
   .grid_container {
     grid-template-columns: none;
 

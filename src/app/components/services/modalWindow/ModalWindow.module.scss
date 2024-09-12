@@ -1,4 +1,4 @@
-@import "../../../mediaQueries.scss";
+@import '../../../mediaQueries.scss';
 
 .modal {
   position: fixed;
@@ -7,6 +7,7 @@
   top: 0;
   width: 100%;
   height: 100%;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -24,7 +25,7 @@
     width: 50%;
   }
 
-  @include respond-to-display-mobile-mormal() {
+  @include respond-to-display-mobile-normal() {
     width: 100%;
     border-radius: 0;
   }
@@ -51,7 +52,7 @@
   height: 30px;
   background: url(../../../assets/сross_mark.png) no-repeat center / cover;
 
-  @include respond-to-display-mobile-mormal() {
+  @include respond-to-display-mobile-normal() {
     right: 10px;
     top: 10px;
   }

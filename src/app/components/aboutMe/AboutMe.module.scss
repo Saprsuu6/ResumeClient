@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 1.5fr;
   }
 
-  @include respond-to-display-mobile-mormal() {
+  @include respond-to-display-mobile-normal() {
     grid-template-rows: none;
     grid-template-columns: none;
 

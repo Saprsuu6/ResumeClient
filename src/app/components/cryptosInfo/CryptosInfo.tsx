@@ -60,28 +60,24 @@ const CryptosInfo = () => {
     return num < 0;
   };
 
-  const dCountPositive = {
-    color: '#9CF725'
-  };
-
-  const dCountNegative = {
-    color: '#F72C25'
-  };
-
   return (
     <Marquee className={cryptoStyles.marquee} autoFill={true} play={true} speed={60}>
       {error ? (
-        <div style={{ padding: '5px 0' }}>
-          <h2 style={{ display: 'inline', margin: '20px' }}>{error?.message}</h2>
+        <div className={cryptoStyles.cryptos_error}>
+          <h2 className={cryptoStyles.cryptos_error_header}>{error?.message}</h2>
           <span>&#8226;</span>
         </div>
       ) : (
         cryptos.map((crypto, index) => (
-          <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
+          <div key={index} className={cryptoStyles.cryptos_block}>
             <div className={cryptoStyles.cryptos_info_block}>
               <h2>{crypto.name}</h2>
               <p>${formatNumbers(crypto.usd)}</p>
-              <span style={isNumNegative(crypto.usd_24h_change) ? dCountNegative : dCountPositive}>
+              <span
+                className={`${
+                  isNumNegative(crypto.usd_24h_change) ? cryptoStyles.dCountNegative : cryptoStyles.dCountPositive
+                }`}
+              >
                 {formatNumbers(crypto.usd_24h_change)}%
               </span>
             </div>
@@ -89,18 +85,6 @@ const CryptosInfo = () => {
           </div>
         ))
       )}
-      {cryptos.map((crypto, index) => (
-        <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
-          <div className={cryptoStyles.cryptos_info_block}>
-            <h2>{crypto.name}</h2>
-            <p>${formatNumbers(crypto.usd)}</p>
-            <span style={isNumNegative(crypto.usd_24h_change) ? dCountNegative : dCountPositive}>
-              {formatNumbers(crypto.usd_24h_change)}%
-            </span>
-          </div>
-          <span>&#8226;</span>
-        </div>
-      ))}
     </Marquee>
   );
 };

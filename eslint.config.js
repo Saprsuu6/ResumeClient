@@ -20,6 +20,9 @@ export default tseslint.config({
     ...reactHooks.configs.recommended.rules,
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     '@typescript-eslint/no-explicit-any': 'warn', // Выдает предупреждение при использовании any
-    '@typescript-eslint/explicit-module-boundary-types': 'off' // Не требует явного указания типов для возвращаемых значений
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // Не требует явного указания типов для возвращаемых значений
+    'react/jsx-no-style': 'off', // Allows using inline styles in JSX
+    'react/no-danger': 'off', // Optional: If you want to use dangerouslySetInnerHTML
+    'no-inline-styles': 'off' // Disables the no-inline-styles rule
   }
 });

@@ -15,11 +15,7 @@ main {
     padding: 2%;
   }
 
-  @include respond-to-display-mobile-mormal() {
-    padding: 2% 0;
-  }
-
-  @include respond-to-display-mobile-mini() {
+  @include respond-to-display-mobile-normal() {
     padding: 2% 0 0 0;
   }
 }

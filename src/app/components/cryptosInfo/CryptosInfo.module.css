@@ -1,3 +1,17 @@
+.cryptos_error {
+  padding: 5px 0;
+}
+
+.cryptos_error_header {
+  display: inline;
+  margin: 20px;
+}
+
+.cryptos_block {
+  display: flex;
+  align-items: center;
+}
+
 .cryptos_info_block h2,
 span {
   color: var(--text-light);
@@ -10,6 +24,14 @@ span {
 .cryptos_info_block p,
 .cryptos_info_block span {
   font-weight: bold;
+}
+
+.dCountPositive {
+  color: #9cf725;
+}
+
+.dCountNegative {
+  color: #f72c25;
 }
 
 .cryptos_info_block {

@@ -1,6 +1,7 @@
 import '../../../index.scss';
 
 import socialLinks from '../../assets/socialLinks.json';
+import MapLibre from './map/MapLibre';
 import newProjectStyle from './NewProjectStyle.module.scss';
 
 const NewPropject = () => {
@@ -13,7 +14,11 @@ const NewPropject = () => {
           <button>Contact Me</button>
         </a>
       </div>
-      <div className="hireMe" />
+      <div className={newProjectStyle.hire_me_picture} />
+      <div className={newProjectStyle.map_block}>
+        <MapLibre />
+        <button id="goHome">Fly to me:)</button>
+      </div>
     </div>
   );
 };

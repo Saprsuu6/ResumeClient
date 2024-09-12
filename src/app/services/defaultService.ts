@@ -1,1 +1,1 @@
-export const serverBaseurl = "https://server-lisa.onrender.com";
+export const serverBaseurl = 'http://localhost:8080';
