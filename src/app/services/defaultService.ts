@@ -1,1 +1,1 @@
-export const serverBaseurl = 'http://localhost:8080';
+export const serverBaseurl = 'https://resumeserver-production.up.railway.app';
