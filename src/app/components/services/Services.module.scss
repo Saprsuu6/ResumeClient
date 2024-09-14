@@ -1,4 +1,4 @@
-@import "../../mediaQueries.scss";
+@import '../../mediaQueries.scss';
 
 .cardContainer {
   display: flex;
@@ -48,13 +48,16 @@
 }
 
 .front_end {
-  background: url(../../assets/front_end.png) no-repeat center / contain;
+  background: url(https://s3.tebi.io/resume-site-pictures/6b3e9757-da08-4ee0-b41f-793235333eda_front_end.png) no-repeat
+    center / contain;
 }
 
 .back_end {
-  background: url(../../assets/back_end.png) no-repeat center / contain;
+  background: url(https://s3.tebi.io/resume-site-pictures/9571c839-4d8c-41e5-b7e8-7e5666c77c33_back_end.png) no-repeat
+    center / contain;
 }
 
 .musician {
-  background: url(../../assets/musician.png) no-repeat center / contain;
+  background: url(https://s3.tebi.io/resume-site-pictures/adc7f5cb-b2ae-49ed-8be8-14f1e4a7a3dd_musician.png) no-repeat
+    center / contain;
 }

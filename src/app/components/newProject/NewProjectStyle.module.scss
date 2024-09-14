@@ -37,7 +37,10 @@
   flex: 1;
   width: 100%;
   height: 400px;
-  background: url(../../assets/contactme.png) no-repeat center / contain;
+  background-image: url(https://s3.tebi.io/resume-site-pictures/a5b4d47a-9285-4e44-898e-3c331f1e9044_contactme.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
 }
 
 .map_block {

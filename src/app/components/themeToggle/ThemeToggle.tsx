@@ -1,15 +1,16 @@
-import React from "react";
-import themeToggleStyles from "./ThemeToggle.module.css";
+import React from 'react';
+
+import themeToggleStyles from './ThemeToggle.module.css';
 
 interface Props {
   setTheme: (value: string) => void;
 }
 
 const ThemeToggle: React.FC<Props> = ({ setTheme }) => {
-  const [localTheme, setLocalTheme] = React.useState("light");
+  const [localTheme, setLocalTheme] = React.useState('light');
 
   const toggleTheme = () => {
-    setLocalTheme((curr) => (curr === "light" ? "dark" : "light"));
+    setLocalTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
   };
 
   React.useEffect(() => {
