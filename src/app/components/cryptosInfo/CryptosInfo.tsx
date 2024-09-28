@@ -15,7 +15,7 @@ type CryptoInfoError = {
 };
 
 const CryptosInfo = () => {
-  const [cryptos, setCryptos] = React.useState<CryptoInfo>([]);
+  const [cryptos, setCryptos] = React.useState<CryptoInfo | null>(null);
   const [error, setError] = React.useState<CryptoInfoError>({
     message: 'Witing to load cryptos...'
   });
@@ -62,13 +62,13 @@ const CryptosInfo = () => {
 
   return (
     <Marquee className={cryptoStyles.marquee} autoFill={true} play={true} speed={60}>
-      {error ? (
+      {!cryptos ? (
         <div className={cryptoStyles.cryptos_error}>
           <h2 className={cryptoStyles.cryptos_error_header}>{error?.message}</h2>
           <span>&#8226;</span>
         </div>
       ) : (
-        cryptos.map((crypto, index) => (
+        cryptos?.map((crypto, index) => (
           <div key={index} className={cryptoStyles.cryptos_block}>
             <div className={cryptoStyles.cryptos_info_block}>
               <h2>{crypto.name}</h2>
