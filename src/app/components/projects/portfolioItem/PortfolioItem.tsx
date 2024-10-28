@@ -21,7 +21,7 @@ const PortfolioItem: React.FC<Props> = ({ backImg, header, text }) => {
       <div style={image} />
       <div className={portfolioItemStyles.info}>
         <h3>{header}</h3>
-        <p>{text}</p>
+        <p dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </div>
   );

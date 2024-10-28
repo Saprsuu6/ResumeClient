@@ -36,7 +36,7 @@ const Propjects = () => {
     {
       img: 'https://s3.tebi.io/resume-site-pictures/4626ecca-1c1f-4c6a-b385-b39da2a688dc_asicxchange.png',
       header: 'AsicxChange',
-      text: 'ASICXchange is one of the largest miner distributors, specializing in offline sales. With five years of experience in the cryptocurrency mining industry, we are working to making crypto mining accessible to all. From start to finish, we are your trusted partner for all your mining needs. ASICXchange’s handle everything from land and power solutions to hosting facilities and mining infrastructure, including transformers, containers, immersion solutions, miner sales, and parts.'
+      text: 'ASICXchange is one of the largest miner distributors, specializing in offline sales. With five years of experience in the cryptocurrency mining industry, we are working to making crypto mining accessible to all. From start to finish, we are your trusted partner for all your mining needs. ASICXchange’s handle everything from land and power solutions to hosting facilities and mining infrastructure, including transformers, containers, immersion solutions, miner sales, and parts. <a target="_blank" href="https://asicxchange.com/">https://asicxchange.com</a>'
     }
   ];
 

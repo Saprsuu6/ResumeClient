@@ -1,7 +1,5 @@
-import { serverBaseurl } from './defaultService';
-
 export function getCryptos() {
-  return fetch(`${serverBaseurl}/getCryptoInfo`, {
+  return fetch(`${import.meta.env.VITE_BASE_URL}/getCryptoInfo`, {
     method: 'GET',
     headers: {
       Accept: '*/*',
