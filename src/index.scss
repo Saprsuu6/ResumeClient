@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import './app/mediaQueries.scss';
+@use './app/mediaQueries.scss' as *;
 
 html {
   scroll-behavior: smooth;
@@ -77,7 +76,7 @@ button:hover {
 #skills,
 #services,
 #projects {
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
 }
 
 @include respond-to-display-mobile-mini() {

@@ -1,4 +1,4 @@
-@import "../../mediaQueries.scss";
+@use '../../mediaQueries.scss' as *;
 
 .carousel {
   position: relative;
@@ -63,7 +63,6 @@ button.next:hover {
   margin-right: 10px;
 }
 
-
 button.prev,
 button.next {
   background-color: var(--text-light);
@@ -83,7 +82,7 @@ button.next:hover {
   display: flex;
 }
 
-.navigation input[name="slides"] {
+.navigation input[name='slides'] {
   display: none;
 }
 
@@ -95,7 +94,7 @@ button.next:hover {
 }
 
 .radio_custom_label:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
@@ -106,6 +105,6 @@ button.next:hover {
   background: var(--theme-hover);
 }
 
-.navigation input[name="slides"]:checked + .radio_custom_label:before {
+.navigation input[name='slides']:checked + .radio_custom_label:before {
   background-color: transparent;
 }

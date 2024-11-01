@@ -23,4 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 # Environment configuration
-**/.env
+/.env

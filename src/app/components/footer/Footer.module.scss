@@ -1,4 +1,4 @@
-@import '../../mediaQueries.scss';
+@use '../../mediaQueries.scss' as *;
 
 .footer {
   background: var(--theme-footer);

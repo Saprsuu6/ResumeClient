@@ -1,4 +1,4 @@
-@import '../../mediaQueries.scss';
+@use '../../mediaQueries.scss' as *;
 
 @include respond-to-display-screen-normal_big_bigger() {
   .grid_container {
