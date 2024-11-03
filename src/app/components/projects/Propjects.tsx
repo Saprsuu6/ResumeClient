@@ -37,6 +37,11 @@ const Propjects = () => {
       img: 'https://s3.tebi.io/resume-site-pictures/4626ecca-1c1f-4c6a-b385-b39da2a688dc_asicxchange.png',
       header: 'AsicxChange',
       text: 'ASICXchange is one of the largest miner distributors, specializing in offline sales. With five years of experience in the cryptocurrency mining industry, we are working to making crypto mining accessible to all. From start to finish, we are your trusted partner for all your mining needs. ASICXchange’s handle everything from land and power solutions to hosting facilities and mining infrastructure, including transformers, containers, immersion solutions, miner sales, and parts. <a target="_blank" href="https://asicxchange.com/">https://asicxchange.com</a>'
+    },
+    {
+      img: 'https://s3.tebi.io/resume-site-pictures/d9fd6375-8a15-427d-89a1-c414307dcebf_html&css&js.jpg',
+      header: 'ASICXchange',
+      text: 'ASICXchange is a leading distributor of cryptocurrency mining equipment, dedicated to making mining accessible for everyone. With over five years in the industry, we specialize in offline sales and provide comprehensive solutions to meet all mining needs. Our services include land and power solutions, hosting facilities, and advanced mining infrastructure. We offer a complete range of products such as transformers, containers, immersion cooling systems, miners, and parts. From setup to maintenance, ASICXchange is your reliable partner in the world of crypto mining. <a target="_blank" href="https://saprsuu6.github.io/Html-CssPractice/">https://saprsuu6.github.io/Html-CssPractice/</a>.'
     }
   ];
 
