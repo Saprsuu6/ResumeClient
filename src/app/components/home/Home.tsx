@@ -1,9 +1,10 @@
 import '../../../index.scss';
 
 import socialLinks from '../../assets/socialLinks.json';
+import { MainContantContainerProps } from '../../pages/Landing';
 import homeStyles from './Home.module.scss';
 
-const Home = () => {
+const Home: React.FC<MainContantContainerProps> = ({ className }) => {
   const h1 = {
     marginBottom: '15px'
   };
@@ -17,7 +18,7 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className={`${homeStyles.grid_container} grid_container`}>
+    <div id="home" className={`${className} ${homeStyles.grid_container} grid_container`}>
       <div className={homeStyles.grid_item}>
         <ul>
           <li>

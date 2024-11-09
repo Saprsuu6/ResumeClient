@@ -13,6 +13,7 @@ html {
 
 html[data-theme='light'] {
   --theme-background: #a9e5bb;
+  --theme-background-inverse: #2d1e2f21;
   --theme-font-color: #2d1e2f;
   --theme-font-color-inverce: #a9e5bb;
   --theme-font-color-side: #60222d;
@@ -23,6 +24,7 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
   --theme-background: #2d1e2f;
+  --theme-background-inverse: #a9e5bb21;
   --theme-font-color: #a9e5bb;
   --theme-font-color-inverce: #2d1e2f;
   --theme-font-color-side: #fcf6b1;
@@ -69,20 +71,6 @@ button {
 
 button:hover {
   background-color: var(--theme-hover);
-}
-
-#home,
-#aboutMe,
-#skills,
-#services,
-#projects {
-  margin-bottom: 4rem;
-}
-
-@include respond-to-display-mobile-mini() {
-  #projects {
-    margin-bottom: 0;
-  }
 }
 
 .grid_container {

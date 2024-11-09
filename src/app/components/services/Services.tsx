@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { MainContantContainerProps } from '../../pages/Landing';
 import RegionHeader from '../regionHeader/RegionHeader';
 import ModalWindow from './modalWindow/ModalWindow';
 import servicesStyles from './Services.module.scss';
 
-const Services = () => {
+const Services: React.FC<MainContantContainerProps> = ({ className }) => {
   const [modalInfo, setModalInfo] = React.useState<number>();
   const [isClose, setIsClose] = React.useState(true);
 
@@ -34,7 +35,7 @@ const Services = () => {
   ];
 
   return (
-    <div id="services">
+    <div id="services" className={className}>
       <RegionHeader title="Services" subTitle="What I offer" />
       <div className={servicesStyles.cardContainer}>
         <div className={`${servicesStyles.card} card`}>

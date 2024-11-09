@@ -2,11 +2,12 @@ import '../../../index.scss';
 
 import React from 'react';
 
+import { MainContantContainerProps } from '../../pages/Landing';
 import RegionHeader from '../regionHeader/RegionHeader';
 import PortfolioItem from './portfolioItem/PortfolioItem';
 import projectStyles from './Projects.module.scss';
 
-const Propjects = () => {
+const Propjects: React.FC<MainContantContainerProps> = ({ className }) => {
   const portfolio = [
     {
       img: 'https://s3.tebi.io/resume-site-pictures/a86e1e1e-1b23-467d-ba65-0fa35444700d_calculator_of_calories.jpg',
@@ -105,7 +106,7 @@ const Propjects = () => {
   };
 
   return (
-    <div id="projects">
+    <div id="projects" className={className}>
       <RegionHeader title="Portfolio" subTitle="Most recent work" />
       <div
         className={projectStyles.carousel}

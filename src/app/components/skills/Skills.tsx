@@ -2,10 +2,11 @@ import '../../../index.scss';
 
 import React from 'react';
 
+import { MainContantContainerProps } from '../../pages/Landing';
 import RegionHeader from '../regionHeader/RegionHeader';
 import skillsStyles from './Skills.module.css';
 
-const Skills = () => {
+const Skills: React.FC<MainContantContainerProps> = ({ className }) => {
   const hexOpacity80Percent = '80';
   const getRandomColor = () => {
     const randonHexColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -42,9 +43,9 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills">
+    <div id="skills" className={className}>
       <RegionHeader title="Skills" subTitle="My Technical Skills" />
-      <div className={`${skillsStyles.skills} skills`}>
+      <div className={`${className} ${skillsStyles.skills} skills`}>
         <ul>
           {items.map((item, index) => (
             <li

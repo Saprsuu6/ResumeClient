@@ -1,12 +1,13 @@
 import '../../../index.scss';
 
 import socialLinks from '../../assets/socialLinks.json';
+import { MainContantContainerProps } from '../../pages/Landing';
 import RegionHeader from '../regionHeader/RegionHeader';
 import aboutMeStyles from './AboutMe.module.scss';
 
-const AboutMe = () => {
+const AboutMe: React.FC<MainContantContainerProps> = ({ className }) => {
   return (
-    <div id="aboutMe" className={`${aboutMeStyles.grid_container} grid_container`}>
+    <div id="aboutMe" className={`${className} ${aboutMeStyles.grid_container} grid_container`}>
       <div className={aboutMeStyles.grid_item}>
         <RegionHeader title="About Me" subTitle="My Introduction" />
       </div>
