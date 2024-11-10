@@ -20,6 +20,10 @@
       box-shadow: none;
     }
   }
+
+  @include respond-to-display-mobile-normal() {
+    margin: 0 !important;
+  }
 }
 
 .container > .min_border > div:first-child {
